@@ -31,7 +31,8 @@ class PhotosController < ApplicationController
 		@photo = Photo.new(photo_params)
 		@photo.save
 
-		redirect_to photos_url
+		#redirect_to photos_path
+		redirect_to :controller => "photos", :action => "index"
 	end
 
 	def destroy
